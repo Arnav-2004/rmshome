@@ -18,9 +18,28 @@ $jscomp.findInternal = function (f, y, w) {
   f instanceof String && (f = String(f));
   for (var n = f.length, H = 0; H < n; H++) {
     var L = f[H];
-    if (y.call(w, L, H, f)) return { i: H, v: L };
+    if (y.call(w, L, H, f)) return { i: H, v: $jscomp.escapeHtml(L) };
   }
   return { i: -1, v: void 0 };
+};
+
+$jscomp.escapeHtml = function (str) {
+  return str.replace(/[&<>"']/g, function (match) {
+    switch (match) {
+      case "&":
+        return "&amp;";
+      case "<":
+        return "&lt;";
+      case ">":
+        return "&gt;";
+      case '"':
+        return "&quot;";
+      case "'":
+        return "&#39;";
+      default:
+        return match;
+    }
+  });
 };
 $jscomp.ASSUME_ES5 = !1;
 $jscomp.ASSUME_NO_NATIVE_MAP = !1;
