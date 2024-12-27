@@ -28,6 +28,15 @@ fetch("/data/symposium-speakers.json")
                 <tr>
                     <td>${item.name}</td>
                     <td>${item.institute}</td>
+                    <td>
+                        ${
+                          item.link
+                            ? `<a class="download-link" href=${item.link}>
+                              <i class="fa-solid fa-download"></i>
+                            </a>`
+                            : ``
+                        }
+                    </td>
                 </tr>
             `;
         }

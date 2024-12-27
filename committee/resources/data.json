@@ -244,14 +244,217 @@
   ],
   "Student Volunteers": [
     {
-      "name": "Arnav Rangwani",
-      "img": "http://edu.ieee.org/in-cucs/wp-content/uploads/sites/690/1706305319039.jpeg",
-      "designation": "Assistant Web Master, Christ University - IEEE Student Branch Bangalore Chapter"
+      "category": "Student Heads",
+      "members": [
+        {
+          "name": "Saksham Insan",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1631121.jpg?2024-05-29%2015:56:59.0"
+        },
+        {
+          "name": "Sidak S Kohli",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1610003.jpg?2023-11-16%2010:30:13.0"
+        }
+      ]
     },
     {
-      "name": "Adharsh Jolly",
-      "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1740789.jpg",
-      "designation": "Student, CHRIST (Deemed to be University), Bangalore"
+      "category": "Website Team",
+      "members": [
+        {
+          "name": "Adharsh Jolly",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1740789.jpg",
+          "designation": "Web Developer, Student, Christ University - Bangalore Kengeri Campus"
+        },
+        {
+          "name": "Arnav Rangwani",
+          "img": "http://edu.ieee.org/in-cucs/wp-content/uploads/sites/690/1706305319039.jpeg",
+          "designation": "Assistant Web Master, Christ University - IEEE Student Branch Bangalore Chapter"
+        }
+      ]
+    },
+    {
+      "category": "Registrations Team",
+      "members": [
+        {
+          "name": "Bettina Soni",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1733768.jpg?2024-08-29%2014:32:54.0"
+        },
+        {
+          "name": "Danish Muneer Chelekkodan",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1580642.jpg?2023-11-15%2014:42:50.0"
+        },
+        {
+          "name": "B K Nandeish",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1666402.jpg?2023-11-03%2013:03:37.0"
+        },
+        {
+          "name": "Geetika Gupta",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1619741.jpg?2023-09-27%2014:34:34.0"
+        },
+        {
+          "name": "Devanand Raj M",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1545952.jpg?2023-09-20%2011:07:21.0"
+        },
+        {
+          "name": "Harshitha N Reddy",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1611190.jpg?2023-09-27%2014:46:23.0"
+        },
+        {
+          "name": "Haniel Bipin Johnson",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1731699.jpg?2024-09-10%2011:14:38.0"
+        },
+        {
+          "name": "Tom Kattampally",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1672422.jpg?2023-08-28%2012:46:07.0"
+        },
+        {
+          "name": "Pratyaksh Sharma",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1731794.jpg?2024-10-01%2015:19:46.0"
+        }
+      ]
+    },
+    {
+      "category": "Transportation Team",
+      "members": [
+        {
+          "name": "T Nikhil Emmanuel",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1657581.jpg?2023-10-03%2014:22:49.0"
+        },
+        {
+          "name": "Akash N",
+          "img": "https://media.licdn.com/dms/image/v2/D5603AQEpP86AhfzXRg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718285787738?e=1738195200&v=beta&t=oEp6QTkV3Q9qvJm46lgTRQ5JqKTSVy4SaZUBUCCcYeY"
+        },
+        {
+          "name": "Bhuvan N",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1463637.jpg?2023-12-04%2008:50:35.0"
+        },
+        {
+          "name": "Mukesh J",
+          "img": "https://media.naukri.com/media/jphotov1/l244%253ALukcMTqy3gAdHLmwUQgEbps0w3UoZsoyg1t73KQICzpAy7qtU6qOHlP%252B37UU"
+        },
+        {
+          "name": "Chris Kevin.R",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1706783.jpg?2023-09-22%2016:53:50.0"
+        },
+        {
+          "name": "Rohith  S",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1677109.jpg?2024-03-23%2008:50:43.0"
+        },
+        {
+          "name": "Pratyaksh Sharma",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1731794.jpg?2024-10-01%2015:19:46.0"
+        },
+        {
+          "name": "Dayanand S",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1443902.jpg?2023-02-13%2011:47:50.0"
+        }
+      ]
+    },
+    {
+      "category": "Logistics Team",
+      "members": [
+        {
+          "name": "Shanet Mary Boby",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1499601.jpg?2023-09-30%2011:59:00.0"
+        },
+        {
+          "name": "Darshan S Gowda",
+          "img": "https://media.licdn.com/dms/image/v2/D4D03AQGg7tygrYjCjg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719657381925?e=1738800000&v=beta&t=bVUkQv-xKh6CC2zpqzGkJ6PLunuZ4Y6q6eQW0I4EuoA"
+        },
+        {
+          "name": "Pradyumna K R",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1489028.jpg?2023-10-12%2016:46:18.0"
+        },
+        {
+          "name": "Sudarshan D",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1437967.jpg?2023-02-13%2011:45:46.0"
+        },
+        {
+          "name": "Anjnai Ramani",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1390933.jpg?2023-04-12%2012:37:12.0"
+        },
+        {
+          "name": "Jashwanth Babu Thamatham Prasad",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1734027.jpg?2024-11-28%2014:23:26.0"
+        },
+        {
+          "name": "Varsha M",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1734037.jpg?2024-10-01%2015:17:28.0"
+        },
+        {
+          "name": "Sudharshan Rayal",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1627591.jpg?2023-11-02%2013:04:34.0"
+        },
+        {
+          "name": "Antria Martin",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1465837.jpg?2023-09-27%2016:07:22.0"
+        },
+        {
+          "name": "Sara Jacob Chavara",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1674916.jpg?2023-09-19%2015:54:53.0"
+        },
+        {
+          "name": "Dayanand S",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1443902.jpg?2023-02-13%2011:47:50.0"
+        },
+        {
+          "name": "Bhavesh Solanki",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1398491.jpg?2024-03-06%2008:45:49.0"
+        },
+        {
+          "name": "Kumarasami Kaviyan BK",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1571624.jpg?2023-09-21%2009:42:37.0"
+        },
+        {
+          "name": "Kasam Bharath samrat",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1307573.jpg?2024-07-13%2022:55:40.0"
+        }
+      ]
+    },
+    {
+      "category": "Hospitality Team",
+      "members": [
+        {
+          "name": "Kasine RS",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1545479.jpg?2023-09-21%2009:40:23.0"
+        },
+        {
+          "name": "S RAMYA",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1688111.jpg?2023-07-19%2011:33:41.0"
+        },
+        {
+          "name": "SHEEBA CELESTINA",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1574347.jpg?2024-03-30%2009:32:21.0"
+        },
+        {
+          "name": "Kanak sethi",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1673580.jpg?2023-08-02%2010:25:29.0"
+        }
+      ]
+    },
+    {
+      "category": "Cultural Team",
+      "members": [
+        {
+          "name": "Udit R Singh",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1746231.jpg?2024-10-07%2012:07:32.0"
+        },
+        {
+          "name": "Swathi P",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1750029.jpg?2024-11-04%2014:34:56.0"
+        },
+        {
+          "name": "ABHI RAKSHA",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1747994.jpg?2024-11-04%2010:27:46.0"
+        },
+        {
+          "name": "S M Tejashree Kashyap",
+          "img": "nodata.png"
+        },
+        {
+          "name": "Kasam Bharath samrat",
+          "img": "https://kp.christuniversity.in/KnowledgePro/images/StudentPhotos/1307573.jpg?2024-07-13%2022:55:40.0"
+        }
+      ]
     }
   ]
 }

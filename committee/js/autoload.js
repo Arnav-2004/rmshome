@@ -32,14 +32,92 @@ const load_committee = (category) => {
   min-height: 50vh !important;">`;
   if (ls[category] == null) {
     content = `
-        <h3 class="is-size-3 text-center">INVALID REQUEST RECIEVED. MEMBER TYPE ISN'T DEFINED</h3>
+        <h3 class="is-size-3 text-center">INVALID REQUEST RECEIVED. MEMBER TYPE ISN'T DEFINED</h3>
     `;
   } else {
     document.querySelector("#committee_category").classList.add("hide");
     document.querySelector("#committee_list").classList.remove("hide");
   }
-  for (let i = 0; i < ls[category].length; i++) {
-    content += `
+
+  if (category === "Student Volunteers") {
+    content += `<div style="width: 100%; min-height: 50vh !important">`;
+    ls[category].map((data) => {
+      if (!(data.members.length >= 1)) return;
+
+      content += `<div style="width: 100%; margin-bottom: 15px">`;
+      content += `<span class="committee_view" style="display: flex; font-style: inherit;
+  font-weight: inherit; box-sizing: inherit; align-items:baseline; justify-content: flex-start;">
+  <h4 class='is-size-3'>${data.category}</h4>
+  </span>
+  <div id="members" style="display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-height: fit-content !important;">`;
+
+      data.members.map((member) => {
+        content += `
+    <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 2px 2px; color: #4a4a4a;
+    max-width: 100%;
+    position: relative; background-color: #fff; display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal; flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word; background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);">
+    
+        <div class="card-content" style="background-color: transparent;
+        padding: 1.5rem;">
+            <div class="media" style="align-items: flex-start;
+            display: flex;
+            text-align: inherit;">
+                <div class="media-left" style="margin-right: 1rem; flex-basis: auto;
+                flex-grow: 0;
+                flex-shrink: 0;">
+                    <figure class="image is-48x48" style="height: 48px;
+                    width: 48px;">
+                        ${
+                          member.img != null && member.img != ""
+                            ? `<img style="display: block;
+                            height: auto;
+                            width: 100%;" src="${
+                              member.img.search("http") != 0
+                                ? "/committee/resources/images/"
+                                : ""
+                            }${member.img}" alt="${
+                                member.name
+                              }" class="img-fluid">`
+                            : ""
+                        }
+                    </figure>
+                </div>
+                <div class="media-content" style="flex-basis: auto;
+                flex-grow: 1;
+                flex-shrink: 1;
+                text-align: inherit;">
+                    <p class="title is-4" style="font-size: 2.2rem;">${
+                      member.name
+                    }</p>
+                    <p class="subtitle is-6" style="font-size: 1.5rem; margin-top: -1.25rem;">${
+                      member.designation
+                        ? `${member.designation}`
+                        : `Student, Christ University - Bangalore Kengeri Campus`
+                    }</p>
+                </div>
+            </div>
+        </div>
+    </div>`;
+      });
+      content += `</div> </div>`;
+    });
+
+    content += `</div>`;
+  } else {
+    for (let i = 0; i < ls[category].length; i++) {
+      content += `
     <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
@@ -92,7 +170,9 @@ const load_committee = (category) => {
             </div>
         </div>
     </div>`;
+    }
   }
+
   document.querySelector("#committee_list").innerHTML = content + "</div>";
   document.getElementById("committee_list").scrollIntoView();
   document.querySelector("#goback").removeEventListener("click", () => {});

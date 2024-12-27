@@ -9,376 +9,419 @@
       href="fontawesome6/css/all.min.css"
     />
     <link rel="stylesheet" type="text/css" href="font/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/schedule.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="icons-1.7.2/font/bootstrap-icons.css"
     />
   </head>
+
   <style>
-    *,
-    *::before,
-    *::after {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
+    .schedule-table thead tr th,
+    .schedule-table tbody tr td {
+      border: 1px solid #111;
+      text-align: left;
+      padding: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
-
-    :root {
-      --border: 1px solid black;
-    }
-
-    .scheduleCard {
-      color: white;
-      padding-left: 2%;
-      padding-right: 2%;
-    }
-
-    main {
-      padding: 0.5rem;
+    .schedule-table {
       width: 100%;
-      margin: auto;
-    }
-    /* body {
-      background: rgb(40, 158, 204);
-    } */
-
-    main > h3 {
-      color: #26327a;
-      font-family: "PT Sans Narrow", sans-serif;
+      border-collapse: collapse;
     }
 
-    article > h6 {
-      color: black;
-      font-family: "PT Sans Narrow", sans-serif;
+    .schedule-table tbody tr {
+      font-size: large;
+      font-weight: 500;
+
+      td {
+        text-align: left !important;
+      }
     }
 
-    article > p {
-      color: black;
+    .table-div {
+      display: flex;
+      flex-direction: column;
+      padding-left: 1%;
+      padding-right: 1%;
     }
 
-    main > section {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      row-gap: 1rem;
+    @media screen and (max-width: 600px) {
+      .table-div {
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+      }
+
+      tbody tr {
+        font-size: small;
+      }
+
+      h1 {
+        font-size: xx-large;
+      }
+
+      #schedule {
+        padding: 10px !important;
+      }
     }
 
-    /* main>section.sec1 {
-      grid-template-columns: minmax(200px, max-content);
-    } */
+    .schedule-table tbody tr:nth-child(3n) {
+      background-color: #a1c3e7 !important;
+    }
 
-    main > section > article {
+    .schedule-table tbody tr:nth-child(3n + 1) {
+      background-color: #d1e9fd !important;
+    }
+
+    .schedule-table tbody tr:nth-child(3n + 2) {
+      background-color: #bddaf5 !important;
+    }
+
+    .schedule-table thead tr {
+      background-color: #506c92 !important;
+      color: white;
       text-align: center;
-      border-left: var(--border);
-      border-right: var(--border);
+
+      th {
+        padding: 10px;
+        font-size: larger;
+      }
     }
 
-    .accordion > div > li {
-      list-style: none;
+    .table-head {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      margin-bottom: 4px;
     }
 
-    .ulinvSpeaker {
-      counter-reset: count;
+    .timing-table tr {
+      min-width: fit-content;
+      text-wrap: nowrap;
+      font-size: large;
+      text-align: center;
     }
 
-    .ulinvSpeaker > li > a {
-      text-decoration: none;
+    .timing-table tr:nth-child(1) {
+      background-color: #d1e9fd !important;
     }
 
-    .ulinvSpeaker > li,
-    .listName {
-      color: rgb(72, 87, 136);
+    .timing-table tr:nth-child(2) {
+      background-color: #a1c3e7 !important;
     }
 
-    .listName {
-      letter-spacing: 3px;
-    }
-
-    .sp {
-      font-size: 1.2rem;
-      color: rgb(72, 87, 136);
-    }
-
-    .ulinvSpeaker > li.sp {
-      counter-increment: count;
-    }
-
-    .ulinvSpeaker > li.sp::before {
-      content: counter(count) "";
-      color: rgb(72, 87, 136);
-    }
-
-    .ulinvSpeaker > li.sp:nth-child(-n + 09):before {
-      content: "0" counter(count);
-    }
-
-    .li2 {
-      font-weight: 600;
-    }
-
-    .li2 > span {
-      letter-spacing: 3px;
-    }
-
-    .fLi > span {
-      display: inline-block;
+    .card {
       position: relative;
-      color: rgb(72, 87, 136);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #ddd;
+      background-clip: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem;
     }
 
-    .ulinvSpeaker > li {
-      list-style: none;
-    }
-
-    .card-body > p > span > a {
-      text-decoration: none;
-    }
-
-    .sp {
-      list-style: square;
-      list-style-position: inside;
-    }
-
-    .card > .card-body > ul {
-      width: 50%;
-    }
-
-    .card > .card-body > ul > li {
-      margin-left: 2rem;
-    }
-
-    .ulinvSpeaker {
-      width: auto !important;
-    }
-
-    table > tbody > tr > td:not(:first-child) {
+    .venue-schedule thead tr th {
+      border: 1px solid #ccc;
       text-align: center;
+      padding: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #506c92;
+      color: white;
     }
 
-    .btn-primary {
-      border: none !important;
-    }
-
-    table > tbody > tr > td:nth-child(3) > a {
-      background-color: #ed6c66 !important;
-    }
-
-    table > tbody > tr > td:nth-child(4) > a {
-      background-color: #31b6cc !important;
-    }
-
-    .table-responsive {
-      width: 100% !important;
-    }
-
-    .scheduleTable {
-      width: 1000px;
-    }
-
-    #accordion {
-      margin: 0 auto;
-      height: 700px;
-      max-width: 400px;
-    }
-
-    #accordion > div > li > .btn {
-      border: none !important;
-      font-size: 1rem;
-    }
-
-    #accordion > div > li:first-child > .btn {
-      color: #0d6efd !important;
-    }
-
-    #accordion > div > li:nth-child(2) > .btn {
-      color: #ed6c66 !important;
-    }
-
-    #accordion > div > li:nth-child(3) > .btn {
-      color: #31b6cc !important;
-    }
-
-    @media only screen and (max-width: 992px) {
-      .card > .card-body > ul {
-        width: 70%;
-      }
-
-      .card > .card-body > ul > li {
-        margin-left: 0;
-      }
-
-      .ulinvSpeaker {
-        width: auto !important;
-      }
-
-      .scheduleTable {
-        width: 950px;
-      }
-    }
-
-    @media only screen and (max-width: 768px) {
-      .sp {
-        font-size: 1.2rem;
-      }
-
-      .card > .card-body > ul {
-        width: 100%;
-      }
-
-      .ulinvSpeaker {
-        width: auto !important;
-      }
+    .venue-schedule tbody tr td {
+      border: 1px solid #111;
+      padding: 8px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   </style>
+
   <body>
-    <!-- day 0 -->
-    <div class="card scheduleCard m-0 p-0">
-      <main class="py-md-5">
-        <h2 style="color: black">Day 1</h2>
-        <h3>27 December, 2024</h3>
-        <section class="sec1">
-          <article class="p-2">
-            <h6>8:00-9:00</h6>
-            <p class="m-0 p-0">Registration</p>
-          </article>
-          <article class="p-2">
-            <h6>9:00-9:20</h6>
-            <p class="m-0 p-0">Inauguration</p>
-          </article>
-          <article class="p-2">
-            <h6>9:20-10:20</h6>
-            <p class="m-0 p-0">Presidential Address</p>
-          </article>
-          <article class="p-2">
-            <h6>10:20-10:50</h6>
-            <p class="m-0 p-0">Tea</p>
-          </article>
-          <article class="p-2">
-            <h6>10:50-11:50</h6>
-            <p class="m-0 p-0">Plenary 1</p>
-          </article>
-          <article class="p-2">
-            <h6>12:00-1:00</h6>
-            <p class="m-0 p-0">Symp 1, 2</p>
-          </article>
-          <article class="p-2">
-            <h6>1:00-2:30</h6>
-            <p class="m-0 p-0">Lunch</p>
-          </article>
-          <article class="p-2">
-            <h6>2:30-3:30</h6>
-            <p class="m-0 p-0">Symp 3, 4</p>
-          </article>
-          <article class="p-2">
-            <h6>3:30-4:00</h6>
-            <p class="m-0 p-0">Tea</p>
-          </article>
-          <article class="p-2">
-            <h6>4:00-5:00</h6>
-            <p class="m-0 p-0">Cont Talks 1-3</p>
-          </article>
-          <article class="p-2">
-            <h6>5:10-6:10</h6>
-            <p class="m-0 p-0">GBM</p>
-          </article>
-        </section>
-      </main>
+    <div style="margin: 20px 15px">
+      <div class="table-head">
+        <h2 style="background-color: #506c92; margin: 1px; padding: 5px">
+          Day 1
+        </h2>
+        <h3 style="background-color: #506c92; margin: 1px; padding: 5px">
+          27 December, 2024
+        </h3>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle abot-txt-innr">
+          <tbody class="timing-table">
+            <tr>
+              <td>08:00 - 08:45</td>
+              <td>08:45 - 09:15</td>
+              <td>09:20 - 10:20</td>
+              <td>10:20 - 10:50</td>
+              <td>10:50 - 11:50</td>
+              <td>12:00 - 01:00</td>
+              <td>01:00 - 02:30</td>
+              <td>02:30 - 03:30</td>
+              <td>03:30 - 04:00</td>
+              <td>04:00 - 05:00</td>
+              <td>05:10 - 06:10</td>
+            </tr>
+            <tr>
+              <td>Registration</td>
+              <td>Inauguration</td>
+              <td style="font-weight: bold">Plenary 1</td>
+              <td>High Tea</td>
+              <td style="font-weight: bold">ST 1, 2</td>
+              <td style="font-weight: bold">ST 3, 4</td>
+              <td>Lunch</td>
+              <td style="font-weight: bold">CT 1,2</td>
+              <td>Tea</td>
+              <td style="font-weight: bold">Plenary 2</td>
+              <td>GBM</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <!-- day 1 -->
-    <div class="card scheduleCard m-0 p-0 mt-1">
-      <main class="py-md-5">
-        <h2 style="color: black">Day 2</h2>
-        <h3>28 December, 2024</h3>
-        <section class="sec2">
-          <article class="p-2">
-            <h6>9:15-10:15</h6>
-            <p class="m-0 p-0">Plenary 2</p>
-          </article>
-          <article class="p-2">
-            <h6>10:15-10:45</h6>
-            <p class="m-0 p-0">Tea</p>
-          </article>
-          <article class="p-2">
-            <h6>10:45-11:45</h6>
-            <p class="m-0 p-0">Symp 5, 6</p>
-          </article>
-          <article class="p-2">
-            <h6>11:55-12:55</h6>
-            <p class="m-0 p-0">Symp 7, 8</p>
-          </article>
-          <article class="p-2">
-            <h6>12:55-2:20</h6>
-            <p class="m-0 p-0">Lunch</p>
-          </article>
-          <article class="p-2">
-            <h6>2:20-3:20</h6>
-            <p class="m-0 p-0">Symp 9, 10</p>
-          </article>
-          <article class="p-2">
-            <h6>3:20-3:50</h6>
-            <p class="m-0 p-0">Tea</p>
-          </article>
-          <article class="p-2">
-            <h6>3:50-4:50</h6>
-            <p class="m-0 p-0">Cont Talks 4-6</p>
-          </article>
-          <article class="p-2">
-            <h6>5:00-6:00</h6>
-            <p class="m-0 p-0">Public Lecture</p>
-          </article>
-        </section>
-      </main>
+    <div style="margin: 20px 15px">
+      <div class="table-head">
+        <h2 style="background-color: #506c92; margin: 1px; padding: 5px">
+          Day 2
+        </h2>
+        <h3 style="background-color: #506c92; margin: 1px; padding: 5px">
+          28 December, 2024
+        </h3>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle abot-txt-innr">
+          <tbody class="timing-table">
+            <tr>
+              <td>09:15 - 10:15</td>
+              <td>10:15 - 10:45</td>
+              <td>10:45 - 11:45</td>
+              <td>11:55 - 12:55</td>
+              <td>12:55 - 02:20</td>
+              <td>02:20 - 03:20</td>
+              <td>03:20 - 03:50</td>
+              <td>03:50 - 04:50</td>
+              <td>05:00 - 06:00</td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold">Plenary 3</td>
+              <td>Tea</td>
+              <td style="font-weight: bold">ST 5, 6</td>
+              <td style="font-weight: bold">ST 7, 8</td>
+              <td>Lunch</td>
+              <td style="font-weight: bold">ST 9, 10</td>
+              <td>Tea</td>
+              <td style="font-weight: bold">CT 4-6</td>
+              <td style="font-weight: bold">Public Lecture</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <!-- day 2 -->
-    <div class="card scheduleCard m-0 p-0 mt-1">
-      <main class="py-md-5">
-        <h2 style="color: black">Day 3</h2>
-        <h3>29 December, 2024</h3>
-        <section class="sec3">
-          <article class="p-2">
-            <h6>9:15-10:15</h6>
-            <p class="m-0 p-0">Plenary 3</p>
-          </article>
-          <article class="p-2">
-            <h6>10:15-10:45</h6>
-            <p class="m-0 p-0">Tea</p>
-          </article>
-          <article class="p-2">
-            <h6>10:45-11:45</h6>
-            <p class="m-0 p-0">Symp 11, 12</p>
-          </article>
-          <article class="p-2">
-            <h6>11:55-12:55</h6>
-            <p class="m-0 p-0">Symp 13, 14</p>
-          </article>
-          <article class="p-2">
-            <h6>12:55-2:20</h6>
-            <p class="m-0 p-0">Lunch</p>
-          </article>
-          <article class="p-2">
-            <h6>2:20-3:20</h6>
-            <p class="m-0 p-0">Symp 15, 16</p>
-          </article>
-          <article class="p-2">
-            <h6>3:20-3:50</h6>
-            <p class="m-0 p-0">Tea</p>
-          </article>
-          <article class="p-2">
-            <h6>3:50-4:50</h6>
-            <p class="m-0 p-0">Cont Talks 7-9</p>
-          </article>
-          <article class="p-2">
-            <h6>5:00-6:00</h6>
-            <p class="m-0 p-0">Plenary 4</p>
-          </article>
-          <article class="p-2">
-            <h6>6:00-6:15</h6>
-            <p class="m-0 p-0">Valedictory</p>
-          </article>
-        </section>
-      </main>
+    <div style="margin: 20px 15px">
+      <div class="table-head">
+        <h2 style="background-color: #506c92; margin: 1px; padding: 5px">
+          Day 3
+        </h2>
+        <h3 style="background-color: #506c92; margin: 1px; padding: 5px">
+          29 December, 2024
+        </h3>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle abot-txt-innr">
+          <tbody class="timing-table">
+            <tr>
+              <td>09:15 - 10:15</td>
+              <td>10:15 - 10:45</td>
+              <td>10:45 - 11:45</td>
+              <td>11:55 - 12:55</td>
+              <td>12:55 - 02:20</td>
+              <td>02:20 - 03:40</td>
+              <td>03:40 - 04:10</td>
+              <td>04:15 - 05:15</td>
+              <td>05:15 - 05:45</td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold">ST 11, 12</td>
+              <td>Tea</td>
+              <td style="font-weight: bold">ST 13, 14</td>
+              <td style="font-weight: bold">ST 15, 16</td>
+              <td>Lunch</td>
+              <td style="font-weight: bold">CT 7-10</td>
+              <td>Tea</td>
+              <td style="font-weight: bold">Plenary 4</td>
+              <td>Valedictory</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <div
+      class="p-2 m-0 card mt-2"
+      style="
+        padding: 10px;
+        margin-top: 2px;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+      "
+    >
+      <p style="font-size: large; font-weight: bold; margin: 5px">
+        <span
+          style="
+            padding: 5px;
+            background-color: orange;
+            color: black;
+            max-width: fit-content;
+            border-radius: 10px;
+          "
+          >Key points</span
+        >
+      </p>
+
+      <p class="m-0 mt-2" style="margin-top: 5px !important">
+        <strong>ST</strong>: Symposia talk.
+      </p>
+      <p class="m-0 mt-2"><strong>CT</strong>: Contributory talk.</p>
+      <p class="m-0 mt-2"><strong>GBM</strong>: General body meeting.</p>
+    </div>
+
+    <div style="margin: 20px 15px">
+      <div style="margin-bottom: 15px; margin-top: 10px">
+        <h1
+          class="text-center"
+          style="color: #2f5179; margin-top: 50px; margin-bottom: 5px"
+        >
+          Venue of Talks
+        </h1>
+        <p style="margin: 10px 0; font-size: large; padding: 1% 10%">
+          Inauguration, all the Plenary talks, Public talk, General Body Meeting
+          and Valedictory ceremony will be held in
+          <strong>Auditorium of Block I, Second Floor</strong>.
+          <br />
+          <br />
+          All Symposium and Contributory talks will be held in
+          <strong> Block I and II.</strong>
+        </p>
+      </div>
+      <div>
+        <h2
+          class="text-center"
+          style="color: #2f5179; margin-top: 20px; margin-bottom: 10px"
+        >
+          Room Allotment
+        </h2>
+      </div>
+      <div class="table-responsive">
+        <table
+          class="venue-schedule table table-bordered align-middle abot-txt-innr"
+        >
+          <thead>
+            <tr>
+              <th>Venue</th>
+              <th>Symposium</th>
+              <th>Symposium Talk</th>
+              <th colspan="2">Contributory Talk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background-color: #d1e9fd !important">
+              <td>Block II - Ground Floor</td>
+              <td>Functional Analysis</td>
+              <td>201</td>
+              <td>201</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #d1e9fd !important">
+              <td>Block II - Ground Floor</td>
+              <td>Partial Differential Equation</td>
+              <td>203</td>
+              <td>206</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #d1e9fd !important">
+              <td>Block II - Ground Floor</td>
+              <td>Number Theory</td>
+              <td>205</td>
+              <td>205</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #d1e9fd !important">
+              <td>Block II - Ground Floor</td>
+              <td>Harmonic Analysis</td>
+              <td>213</td>
+              <td>213</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #bddaf5 !important">
+              <td>Block II - First Floor</td>
+              <td>Complex Analysis</td>
+              <td>225</td>
+              <td>224</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #a1c3e7 !important">
+              <td>Block II - Second Floor</td>
+              <td>Geometry and Topology</td>
+              <td>238</td>
+              <td>237</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #d1e9fd !important">
+              <td>Block II - Third Floor</td>
+              <td>Algebra</td>
+              <td>256</td>
+              <td>254</td>
+              <td>255</td>
+            </tr>
+            <tr style="background-color: #bddaf5 !important">
+              <td>Block I - Ground Floor</td>
+              <td>Groups and their Representation</td>
+              <td>004</td>
+              <td>004</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #bddaf5 !important">
+              <td>Block I - Ground Floor</td>
+              <td>Algebraic Geometry</td>
+              <td>002</td>
+              <td>002</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #a1c3e7 !important">
+              <td>Block I - First Floor</td>
+              <td>Probability Theory</td>
+              <td>111</td>
+              <td>111</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h1
+        class="text-center"
+        style="color: #2f5179; margin-top: 50px; margin-bottom: 5px"
+      >
+        Schedule & Abstracts (Category Wise)
+      </h1>
+      <p
+        class="text-center"
+        style="font-size: large; font-weight: 500; color: gray"
+      >
+        Click on the respective category to view the schedule
+      </p>
+    </div>
+
+    <div style="padding: 25px; margin-top: 10px" id="schedule"></div>
   </body>
 </html>
